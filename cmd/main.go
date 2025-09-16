@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 	"strconv"
 
 	"github.com/gin-contrib/cors"
@@ -41,7 +42,11 @@ func main() {
 	}
 
 	// Start server
-	r.Run(":8080")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	r.Run(":" + port)
 }
 
 func handlePathfinding(c *gin.Context) {
