@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A* Pathfinding Visualizer</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚗 A* Pathfinding Visualizer</h1>
+            <p>Interactive pathfinding algorithm demonstration for autonomous vehicle navigation</p>
+        </header>
+
+        <div class="controls-panel">
+            <div class="control-group">
+                <label for="gridWidth">Grid Size:</label>
+                <select id="gridWidth">
+                    <option value="20">20x20</option>
+                    <option value="30" selected>30x30</option>
+                    <option value="40">40x40</option>
+                    <option value="50">50x50</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="heuristic">Heuristic:</label>
+                <select id="heuristic">
+                    <option value="manhattan" selected>Manhattan</option>
+                    <option value="euclidean">Euclidean</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="animationSpeed">Speed:</label>
+                <input type="range" id="animationSpeed" min="1" max="10" value="5">
+                <span id="speedValue">5</span>
+            </div>
+
+            <div class="control-group">
+                <input type="checkbox" id="animate" checked>
+                <label for="animate">Animate Search</label>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button id="findPath" class="btn primary">Find Path</button>
+            <button id="clearPath" class="btn secondary">Clear Path</button>
+            <button id="clearWalls" class="btn secondary">Clear Walls</button>
+            <button id="generateMaze" class="btn secondary">Generate Maze</button>
+            <button id="resetGrid" class="btn danger">Reset All</button>
+        </div>
+
+        <div class="main-content">
+            <div class="canvas-container">
+                <canvas id="gridCanvas"></canvas>
+                <div id="loading" class="loading-overlay">
+                    <div class="spinner"></div>
+                    <p>Finding optimal path...</p>
+                </div>
+            </div>
+
+            <div class="info-panel">
+                <div class="legend">
+                    <h3>Legend</h3>
+                    <div class="legend-item">
+                        <div class="legend-color start"></div>
+                        <span>Start Point</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color end"></div>
+                        <span>End Point</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color wall"></div>
+                        <span>Wall/Obstacle</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color explored"></div>
+                        <span>Explored Node</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color path"></div>
+                        <span>Optimal Path</span>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <h3>Statistics</h3>
+                    <div class="stat-item">
+                        <strong>Path Length:</strong> <span id="pathLength">-</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>Nodes Explored:</strong> <span id="nodesExplored">-</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>Algorithm:</strong> <span id="algorithmUsed">A*</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>Status:</strong> <span id="status">Ready</span>
+                    </div>
+                </div>
+
+                <div class="instructions">
+                    <h3>Instructions</h3>
+                    <ul>
+                        <li><strong>Left Click:</strong> Place/remove walls</li>
+                        <li><strong>Right Click:</strong> Set start point (green)</li>
+                        <li><strong>Ctrl + Click:</strong> Set end point (red)</li>
+                        <li><strong>Drag:</strong> Paint multiple walls</li>
+                        <li><strong>Space:</strong> Start pathfinding</li>
+                        <li><strong>R:</strong> Reset grid</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
