@@ -1,8 +1,6 @@
 module github.com/Arc-B/astar-pathfinding-visualizer
 
-go 1.23.0
-
-toolchain go1.24.7
+go 1.23
 
 require (
 	github.com/bytedance/sonic v1.13.3 // indirect
