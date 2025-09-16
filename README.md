@@ -13,7 +13,7 @@ An interactive web-based visualization of the A* pathfinding algorithm, designed
 
 ## 🚀 Live Demo
 
-[**Try the live demo here**](your-deployment-url-here) *(Add your deployment URL)*
+[**Try the live demo here**](https://astar-pathfinding-visualizer-production.up.railway.app/) *(Add your deployment URL)*
 
 ## 🛠️ Technology Stack
 
