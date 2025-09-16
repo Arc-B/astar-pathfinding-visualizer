@@ -2,8 +2,6 @@
 
 An interactive web-based visualization of the A* pathfinding algorithm, designed to demonstrate core concepts used in autonomous vehicle navigation systems.
 
-![A* Pathfinding Visualizer Demo](https://via.placeholder.com/800x400/667eea/ffffff?text=A*+Pathfinding+Visualizer)
-
 ## 🌟 Features
 
 - **Interactive Grid Interface**: Click and drag to create obstacles, set start/end points
@@ -188,10 +186,6 @@ Contributions are welcome! Please feel free to submit issues and pull requests.
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - Inspired by the need for visual algorithm education
@@ -202,4 +196,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **⭐ Star this repository if you found it helpful!**
 
-**🔗 Connect with me:** [LinkedIn](https://linkedin.com/in/your-profile) | [Portfolio](https://your-portfolio.com)
+**🔗 Connect with me:** [LinkedIn](https://linkedin.com/in/archanab7) | [Portfolio](https://arc-b.github.io/my-portfolio/)
